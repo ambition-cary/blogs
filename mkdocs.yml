@@ -1,0 +1,5 @@
+site_name: 我的博客
+site_url: https://www.baidu.com
+theme:
+  name: material
+
