@@ -89,8 +89,6 @@ extra:
   homepage: https://ambition-liukai.github.io/blogs/
   version:
     provider: mike
-    default: stable
-    alias: true
   tags:
     Foo: foo
     Bar: bar
