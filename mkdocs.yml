@@ -1,5 +1,5 @@
 site_name: Ambition-LiuKai's Blogs
-site_url: https://github.com/Ambition-LiuKai/blogs
+site_url: https://ambition-liukai.github.io/blogs/
 site_author: Ambition-LiuKai
 
 nav:
@@ -89,7 +89,8 @@ extra:
   homepage: https://ambition-liukai.github.io/blogs/
   version:
     provider: mike
-  generator: true
+    default: stable
+    alias: true
   tags:
     Foo: foo
     Bar: bar
@@ -98,6 +99,14 @@ plugins:
   - tags:
       tags_file: tags.md
   - search
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
   - blog:
       draft: true
       draft_on_serve: false
