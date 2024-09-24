@@ -1,0 +1,7 @@
+:root {
+    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+    --md-code-font: "JetBrains Mono", "Noto Serif SC";
+}
+.md-grid {
+    max-width: 1440px; /* 横向铺满：initial; */
+}
