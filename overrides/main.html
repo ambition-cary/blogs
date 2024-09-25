@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
+<!-- 配置版本提醒 -->
 {% block outdated %}
   You're not viewing the latest version.
   <a href="{{ '../' ~ base_url }}">
     <strong>Click here to go to latest.</strong>
   </a>
+{% endblock %}
+
+<!-- 设置公告 -->
+{% block announce %}
+  这是一条公告
 {% endblock %}

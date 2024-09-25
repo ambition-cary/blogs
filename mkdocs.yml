@@ -27,15 +27,20 @@ theme:
     # - navigation.prune # 目录(目录树)剪枝
     - navigation.indexes # 目录(目录树)索引
     - toc.follow # 目录(目录树)跟随
-    - toc.integrate # 目录(目录树)集成
+    # - toc.integrate # 目录(目录树)集成
     - navigation.top # 返回顶部
 
     - search.suggest # 搜索建议
     - search.highlight # 搜索高亮
     - search.share # 搜索分享
 
+    - header.autohide # 隐藏头
+    - announce.dismiss # 公告取消按钮
 
+    - navigation.footer # 配置上一页和下一页
 
+    - content.action.edit # 编辑内容
+    - content.action.view # 查看内容
 
 
 
@@ -45,6 +50,9 @@ theme:
   logo: assets/logo.png
   icon:
     logo: material/library
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
     tag: 
       foo: material/tag
       bar: material/tag-text
@@ -78,18 +86,40 @@ theme:
     
 extra_css:
   - css/extra.css
+  
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  # - css/404.css
 
 extra_javascript:
   - js/shortcuts.js
+  - js/extra.js
+
+copyright: Copyright &copy; 2016 - 2020 Martin Donath
+
+repo_url: https://github.com/Ambition-LiuKai/blogs
+repo_name: Ambition-LiuKai/blogs
+edit_uri: edit/main/docs/
 
 extra:
+  generator: false
   homepage: https://ambition-liukai.github.io/blogs/
   version:
     provider: mike
     default: latest
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/Ambition-LiuKai
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Ambition-LiuKai
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/LiuKai01035373
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/profile.php?id=61557686393650
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/%E5%87%AF-%E5%88%98-2878a92b8/
+    
   tags:
     Foo: foo
     Bar: bar
@@ -97,16 +127,72 @@ extra:
 plugins:
   - tags:
       tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_date 
+      exclude:
+        - index.md
   - search
-  - mike:
-      alias_type: symlink
-      redirect_template: null
-      deploy_prefix: ''
-      canonical_version: null
-      version_selector: true
-      css_dir: css
-      javascript_dir: js
+  # - mike:
+  #     alias_type: symlink
+  #     redirect_template: null
+  #     deploy_prefix: ''
+  #     canonical_version: null
+  #     version_selector: true
+  #     css_dir: css
+  #     javascript_dir: js
   - blog:
       draft: true
       draft_on_serve: false
       draft_if_future_date: true
+      post_date_format: full
+      post_readtime: true
+      post_readtime_words_per_minute: 265
+      post_url_format: "{date}/{slug}"
+      pagination_url_format: "page/{page}"
+
+markdown_extensions:
+  - tables
+  - abbr # 缩写
+  - attr_list # 注释
+  - admonition # 警告
+  - def_list # li列表
+  - footnotes # 脚注
+  - md_in_html
+
+  - toc: # Table of Contents
+      permalink: true
+      title: 划重点，要考的！
+      permalink_title: 世界聚焦于你
+
+  - pymdownx.tasklist:
+      custom_checkbox: true # 任务列表
+      # clickable_checkbox: true # 可点击
+  - pymdownx.emoji: # 显示表情图标
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.betterem # 优化mk格式识别
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde # 各种高亮、下划线
+  - pymdownx.keys # 显示键盘按键图标
+  - pymdownx.critic: # 突出标记注释
+      mode: view
+  - pymdownx.details # 标注可折叠
+  - pymdownx.highlight: # 代码块
+      anchor_linenums: true
+      auto_title: true # 显示语言
+      linenums: true # 显示行号
+      linenums_style: pymdownx-inline # 显示行号的格式
+      line_spans: __span
+  - pymdownx.inlinehilite # 行内标注语言 range()
+  - pymdownx.snippets
+  - pymdownx.smartsymbols # 符号转义
+  - pymdownx.tabbed:
+      alternate_style: true # tabs并列
+      # combine_header_slug: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
