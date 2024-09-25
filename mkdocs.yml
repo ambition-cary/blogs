@@ -85,7 +85,7 @@ theme:
         name: 赞美黑夜
     
 extra_css:
-  - css/extra.css
+  - blog/css/extra.css
   
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
@@ -93,8 +93,8 @@ extra_css:
   # - css/404.css
 
 extra_javascript:
-  - js/shortcuts.js
-  - js/extra.js
+  - blog/js/shortcuts.js
+  - blog/js/extra.js
 
 copyright: Copyright &copy; 2016 - 2020 Martin Donath
 
