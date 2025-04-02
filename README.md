@@ -1,2 +1,2 @@
 # blogs
-test
+https://ambition-cary.github.io/blogs/

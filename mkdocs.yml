@@ -1,6 +1,6 @@
-site_name: Ambition-LiuKai's Blogs
-site_url: https://ambition-liukai.github.io/blogs/
-site_author: Ambition-LiuKai
+site_name: ambition-cary's Blogs
+site_url: https://ambition-cary.github.io/blogs/
+site_author: ambition-cary
 
 nav:
   - 主页: index.md
@@ -110,21 +110,21 @@ extra_javascript:
 
 copyright: Copyright &copy; 2016 - 2020 Martin Donath
 
-repo_url: https://github.com/Ambition-LiuKai/blogs
-repo_name: Ambition-LiuKai/blogs
+repo_url: https://github.com/ambition-cary/blogs
+repo_name: ambition-cary/blogs
 edit_uri: edit/main/docs/
 
 extra:
   generator: false
-  homepage: https://ambition-liukai.github.io/blogs/
+  homepage: https://ambition-cary.github.io/blogs/
   # version:
   #   provider: mike
   #   default: latest
   social:
     - icon: fontawesome/brands/gitlab
-      link: https://gitlab.com/Ambition-LiuKai
+      link: ''
     - icon: fontawesome/brands/github 
-      link: https://github.com/Ambition-LiuKai
+      link: https://github.com/ambition-cary
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/LiuKai01035373
     - icon: fontawesome/brands/facebook
